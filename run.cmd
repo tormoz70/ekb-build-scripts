@@ -1,4 +1,4 @@
-set BUILD_SERVER_PATH=C:\build-server\givc\ekb
+set BUILD_SERVER_PATH=%CD%
 set DEPLOY_PATH=C:\www
 set BUILD_SERVER_STATUS=0
 set BUILD_CLIENT_STATUS=0
@@ -12,14 +12,14 @@ echo -------------------------------------------------------------------
 
 PAUSE
 
-call build-scripts\update.cmd
-call build-scripts\build.cmd
+call ekb-build-scripts\update.cmd
+call ekb-build-scripts\build.cmd
 
 echo -
 echo -
 IF %BUILD_SERVER_STATUS% == 0 IF %BUILD_CLIENT_STATUS% == 0 (
 echo All builds sucsess!
-call build-scripts\deploy.cmd
+call ekb-build-scripts\deploy.cmd
 echo -------------------------------------------------------------------
 echo - Deploy success!
 echo -------------------------------------------------------------------

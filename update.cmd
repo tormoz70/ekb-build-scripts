@@ -20,7 +20,7 @@ echo -------------------------------------------------------------------
 echo Updating Bio.Framework.8 ...
 cd ..\..\Bio.Framework.8
 git pull
-cd ..\givc\ekb
+cd %BUILD_SERVER_PATH%
 echo Done 
 echo -------------------------------------------------------------------
 echo -
